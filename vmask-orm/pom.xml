@@ -9,30 +9,19 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>vmask-core</artifactId>
+  <artifactId>vmask-orm</artifactId>
 
   <dependencies>
-
     <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>tomcat-jdbc</artifactId>
+          <groupId>org.apache.tomcat</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
-    </dependency>
-
   </dependencies>
 
 </project>

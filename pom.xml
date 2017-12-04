@@ -41,6 +41,14 @@
 
   <modules>
     <module>vmask-core</module>
+    <module>vmask-datasource</module>
+    <module>vmask-example</module>
+    <module>vmask-logger</module>
+    <module>vmask-orm</module>
+    <module>vmask-security</module>
+    <module>vmask-authorization</module>
+    <module>vmask-test</module>
+    <module>vmask-web</module>
   </modules>
 
   <properties>
@@ -52,10 +60,9 @@
 
     <spring-boot.verion>1.5.6.RELEASE</spring-boot.verion>
     <mybatis.version>1.3.1</mybatis.version>
-    <druid.version>1.1.5</druid.version>
-    <pagehelper.version>1.2.3</pagehelper.version>
-    <fastjson.version>1.2.40</fastjson.version>
-    <guava.version>23.2-jre</guava.version>
+    <druid.version>1.1.6</druid.version>
+    <fastjson.version>1.2.41</fastjson.version>
+    <guava.version>23.5-jre</guava.version>
     <swagger.version>2.7.0</swagger.version>
     <shiro.version>1.4.0</shiro.version>
 
@@ -105,12 +112,6 @@
       </dependency>
 
       <dependency>
-        <groupId>com.github.pagehelper</groupId>
-        <artifactId>pagehelper-spring-boot-starter</artifactId>
-        <version>${pagehelper.version}</version>
-      </dependency>
-
-      <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>fastjson</artifactId>
         <version>${fastjson.version}</version>
@@ -141,7 +142,53 @@
       </dependency>
 
       <!-- 所有子模块 -->
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-authorization</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-datasource</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-logger</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-orm</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-security</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-test</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.vmask</groupId>
+        <artifactId>vmask-web</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
     </dependencies>
   </dependencyManagement>
